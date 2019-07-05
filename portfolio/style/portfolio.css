@@ -2,7 +2,7 @@ body {
     margin: 0%;
 }
 
-.navbar {
+.mynavbar {
     overflow: hidden;
     background-color: Black;
     position: fixed;
@@ -11,7 +11,7 @@ body {
     z-index: 1;
 }
 
-.navbar a {
+.mynavbar a {
     float: left;
     display: block;
     color: white;
@@ -22,13 +22,14 @@ body {
     text-align: center;
 }
 
-.navbar a:hover {
+.mynavbar a:hover {
     background-color: #7199d9;
     color: black;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.navbar a.active {
+.mynavbar a.active {
     background-color: #3e70c0;
 }
 
