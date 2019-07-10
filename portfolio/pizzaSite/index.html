@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./Style/pizza.css">
+    <title>The Pizza Place</title>
+</head>
+<body>
+
+    <div id="head">
+
+        <h1>Welcome to the Pizza Place!</h1>
+
+        <h2>What can we make for you today?</h2>
+
+    </div>
+
+    <div class="container">
+        
+        <form action="" method="get" id="order">
+            
+                <div id="size">
+                    <h3>Size:</h3>
+                    Personal Pizza:<input type="radio" name="size" value="personal" class="size"><br>
+                    Medium Pizza:<input type="radio" name="size" value="medium" class="size"><br>
+                    Large Pizza:<input type="radio" name="size" value="large" class="size" checked><br>
+                    Extra Large Pizza:<input type="radio" name="size" value="xl" class="size"><br><br>
+                </div>
+
+                <div id="toppings">
+                    <h3>What would you like on your pizza?</h3>
+                    <!--<h4>What would you like on your pizza?</h4><br>-->
+
+                    <div id="crust">
+                        <h4>Crust</h4>
+                        Plain Crust:<input type="radio" name="crst" value="plain" class="crust" checked>
+                        Garlic Butter Crust:<input type="radio" name="crst" value="garlic" class="crust">
+                        Spicy Crust:<input type="radio" name="crst" value="spicy" class="crust">
+                        House Special Crust:<input type="radio" name="crst" value="house" class="crust">
+                        Cheese Stuffed Crust:<input type="radio" name="crst" value ="stuffed" class="crust">
+                    </div>
+
+                    <div id="sauce">
+                        <h4>Sauce</h4>
+                        Marinara:<input type="radio" name="sauce" value="marinara" class="sauce" checked>
+                        White Sauce:<input type="radio" name="sauce" value="white" class="sauce">
+                        Barbeque Sauce:<input type="radio" name="sauce" value="bbq" class="sauce">
+                        No sauce:<input type="radio" name="sauce" value="none" class="sauce">
+                    </div>
+
+                    <div id="chz">
+                        <h4>Cheese</h4>
+                        Regular:<input type="radio" name="chz" value="regular" class="cheez" checked>
+                        No cheese:<input type="radio" name="chz" value="none" class="cheez">
+                        Extra cheese:<input type="radio" name="chz" value="extra" class="cheez">
+                    </div>
+
+                    <div id="meat">
+                        <h4>Meats</h4>
+                        Pepperoni:<input type="checkbox" name="meat" value="pepperoni" class="mt">
+                        Sausage:<input type="checkbox" name="meat" value="sausage" class="mt">
+                        Canadian Bacon:<input type="checkbox" name="meat" value="canadianBacon" class="mt"><br>
+                        Ground Beef:<input type="checkbox" name="meat" value="groundBeef" class="mt">
+                        Anchovy:<input type="checkbox" name="meat" value="anchovies" class="mt">
+                        Chicken:<input type="checkbox" name="meat" value="chicken" class="mt">
+                    </div>
+
+                    <div id="veg">
+                        <h4>Veggies</h4>
+                        Tomato:<input type="checkbox" name="veg" value="tomato" class="vg">
+                        Onion:<input type="checkbox" name="veg" value="onion" class="vg">
+                        Black Olive:<input type="checkbox" name="veg" value="blackOlive" class="vg">
+                        Green Pepper:<input type="checkbox" name="veg" value="greenPepper" class="vg"><br>
+                        Mushrooms:<input type="checkbox" name="veg" value="mushroom" class="vg">
+                        Pineapple:<input type="checkbox" name="veg" value="pineapple" class="vg">
+                        Spinach:<input type="checkbox" name="veg" value="spinach" class="vg">
+                        Jalapeno:<input type="checkbox" name="veg" value="jalapeno" class="vg">
+                    </div>
+                </div>
+
+            <Button type="button" id="orderbtn" onclick="printInvoice(),totalCost()">Add Total</Button>
+
+        </form>
+
+    </div>
+        
+    <div class="modal" id="modal">
+
+        <div id="invoice">
+
+            <p class="closebtn" id="closebtn">Close Window</p>
+
+            <h2 class="order">Your Order</h2>
+
+            <table class="invoice">
+
+                <tr>
+                    <th>Size: </th>
+                    <td id="invSz">x</td>
+                    <td class="tbltotal" id="costSize">x</td>
+                </tr>
+
+                <tr>
+                    <th>Crust: </th>
+                    <td id="invCrst">x</td>
+                    <td class="tbltotal" id="costCrust">No Extra Charge</td>
+                </tr>
+
+                <tr>
+                    <th>Sauce: </th>
+                    <td id="invSauce">x</td>
+                    <td class="tbltotal" id="costSauce">No Extra Charge</td>
+                </tr>
+
+                <tr>
+                    <th>Cheese: </th>
+                    <td id="invChz">x</td>
+                    <td class="tbltotal" id="chzTotal">No Extra Charge</td>
+                </tr>
+
+                <tr>
+                    <th>Meat(s): </th>
+                    <td id="invMeat">x</td>
+                    <td class="tbltotal" id="meatTotal">No Extra Charge</td>
+                </tr>
+
+                <tr>
+                    <th>Veggie(s): </th>
+                    <td id="invVeggie">x</td>
+                    <td class="tbltotal" id="vegTotal">No Extra Charge</td>
+                </tr>
+
+                <tr>
+                    <th>Total:</th>
+                    <td></td>
+                    <td class="tbltotal" id="totalPrice">Total cost</td>
+                </tr>
+
+            </table>
+
+            <div class="orderCancelBtns">
+                <button type="submit" class="invoiceBtn" onclick="closeModal()">Place Order</button>
+                <Button type="button" class="invoiceBtn" onclick="closeModal()">Cancel/make changes</Button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="./JS/pizza.js"></script>
+    
+</body>
+</html>
