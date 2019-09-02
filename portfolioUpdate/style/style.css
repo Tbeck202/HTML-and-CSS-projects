@@ -1,0 +1,421 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+/*-------------------- NAVBAR CSS ----------------- */
+header{
+    width: 100%;
+    display: block;
+    background-color: #73E499;
+    color: #fff;
+}
+
+.headContain {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.headContain:nth-child(2) {
+    display: none;
+}
+
+h1 {
+    color: #000;
+    margin: 0;
+    padding: 5px;
+}
+
+.nav {
+    display: flex;
+    z-index: 1;
+}
+
+.links {
+    margin: auto;
+}
+
+.contact {
+    margin: 20px auto;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #42B1D6;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .header a:hover, .dropdown:hover .dropbtn {
+    background-color: #73E499;
+  }
+  
+  .dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #73E499;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    color: #42B1D6;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/*-------------------- END NAVBAR CSS ----------------- */
+
+.bodycontainer {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    background-color: #C1E0EB;
+}
+
+.about-container {
+    margin: 10px auto;
+}
+
+.bodycontainer2 {
+    width: 100%;
+    font-size: 1.5em;
+    display: flex;
+    padding: 10px;
+    background-color: #C4F0D3;
+    flex-direction: column;
+}
+
+.about-me {
+    padding: 0 10px;
+    margin: auto;
+    width: 80%;
+    display: flex;
+}
+
+.bio {
+    width: 80%;
+    margin: auto;
+    font-size: .9em;
+}
+
+.skills-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.skill-links {
+    color: black;
+}
+
+.skill-links:hover {
+    color: white;
+}
+
+.skill-icons {
+    padding: 0 5px;
+    margin: auto;
+}
+
+.skill-links-custom {
+    background-color: #000;
+    margin: auto;
+    color: #C1E0EB;
+    font-size: .7em;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.skill-links-custom:hover {
+    background-color: #fff;
+}
+
+img {
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 5px 5px 10px #000;
+}
+
+.me {
+    width: 60%;
+}
+
+h3 {
+    color: #fff;
+    margin: 0;
+    padding: 5px;
+}
+
+h6 {
+    width: 80%;
+    font-size: .8em;
+    margin: auto;
+}
+
+.bodytext {
+    color: #000;
+    margin: auto;
+}
+
+.bodytag {
+    margin: auto;
+    display: flex;
+}
+
+.bodycontainer .bodytext:hover {
+    color: #42B1D6;
+}
+.gitcontainer {
+    background-color: #C4F0D3;
+    display: flex;
+    margin: auto;
+}
+
+.bodycontainer3 {
+    background-color: #73E499;
+    width: 100%;
+    font-size: 1.5em;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.body-links {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: auto;
+    background-color: rgb(219, 219, 219);
+    font-size: .75em;
+    color: black;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.separate {
+    height: 5px;
+    color: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid black;
+}
+
+.projectcontainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .05);
+    box-shadow: 2px 2px 10px #000;
+    margin: 5px auto;
+}
+
+.projectinfo {
+    margin: 10px auto;
+}
+
+.project-assets {
+    box-shadow: 5px 5px 10px #000;
+    margin: 10px auto 30px;
+    width: 60%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    font-size: .7em;
+    margin: 20px auto;
+}
+
+
+@media only screen and (min-width: 768px) {
+    
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header {
+        display: flex;
+    }
+    
+    .nav {
+        justify-content: center;
+    }
+
+    .headContain {
+        display: flex;
+        margin: auto;
+    }
+
+    .headContain:nth-child(2) {
+        display: flex;
+    }
+
+    .links {
+        padding: 0 5px;
+    }
+
+    .linksRight {
+        display: flex;
+    }
+
+    img, .icon:hover {
+        color: #42B1D6;
+    }
+
+    .me {
+        width: 50%;
+    }
+
+    .bodytag {
+        width: 60%;
+    }
+
+    .fab fa-linkedin {
+        box-shadow: none;
+    }
+
+    .body-links:hover {
+        color: white;
+        box-shadow: none;
+    }
+
+    @media only screen and (min-width: 1024px) {
+
+        .about-container {
+            width: 80%;
+            display: flex;
+            margin: 10px auto 10px;
+        }
+
+        .me {
+            width: 40%;
+            margin: auto;
+            max-height: 390px;
+            max-width: 390px;
+        }
+
+        .bio {
+            font-size: .8em;
+        }
+
+        .bodycontainer2 {
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .bodytag {
+            width: 300px;
+            margin: auto;
+        }
+
+        h3 {
+            font-size: .9em;
+        }
+
+    }
+
+    @media only screen and (min-width: 1500px) {
+
+        .about-container {
+            width: 60%;
+        }
+
+        .skills-container {
+            width: 50%;
+        }
+        
+        .about-container {
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+
+        .bodycontainer3 {
+            flex-direction: row;
+        }
+
+        .projectcontainer {
+            width: 40%;
+            margin: 20px auto;
+        }
+
+        @media only screen and (min-width: 2000px) {
+
+            body {
+                background-color: rgb(199, 199, 199);
+            }
+
+            .container {
+                width: 80%;
+                margin: auto;
+                box-shadow: 2px 2px 20px #000;
+            }
+
+            .skills-container {
+                width: 30%;
+            }
+
+            .separate {
+                width: 80%;
+                margin: auto;
+            }
+
+            
+        }
+    }
+}
+
+
+
+  
+
+ 
+
+
